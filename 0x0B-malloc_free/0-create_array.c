@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
-* create_array - Function that creates an array of chars, and initializes it with a specific char. 
-* @ch: A pointer to the array
-* @size: Size of the array 
+* create_array - Function that creates an array of chars
+* @size: Size of the array
 * @c: Initialize char
+* Return: A pointer or Null
 */
 
 char *create_array(unsigned int size, char c)
@@ -18,6 +18,9 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	ch = malloc(sizeof(char) * size);
+
+	if (ch == NULL)
+		return (NULL);
 
 	for (i = 0; i < size; i++)
 
